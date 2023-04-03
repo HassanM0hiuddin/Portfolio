@@ -1,4 +1,4 @@
-const header = document.querySelctor('header')
+const header = document.querySelector('header')
 
 header.addEventListener('scroll', function () {
   header.classList.toggle('sticky', window.scrollY > 200)
