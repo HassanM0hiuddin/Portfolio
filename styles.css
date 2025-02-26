@@ -181,37 +181,6 @@ span {
   font-size: 22px;
   font-weight: 500;
 }
-.technologies-section {
-  padding: 50px 0;
-  text-align: center;
-  background-color: #f9f9f9; /* Example background color */
-}
-
-.technologies-section h2 {
-  margin-bottom: 20px;
-}
-
-.technologies-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.technologies-list li {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.technology-icon {
-  width: 50px; /* Adjust icon size */
-  height: 50px;
-  margin-bottom: 5px;
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -509,4 +478,96 @@ span {
     font-size: 16px;
     word-spacing: 7px;
   }
+}
+#skills {
+  text-align: center;
+  padding: 50px 20px;
+  background: #191919;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
+
+.skill i {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* Assigning colors to each skill */
+.skill[data-skill='C++'] {
+  background-color: #00599c;
+}
+.skill[data-skill='CSS'] {
+  background-color: #1572b6;
+}
+.skill[data-skill='Express'] {
+  background-color: #000000;
+}
+.skill[data-skill='Figma'] {
+  background-color: #f24e1e;
+}
+.skill[data-skill='Flask'] {
+  background-color: #000000;
+}
+.skill[data-skill='HTML5'] {
+  background-color: #e34f26;
+}
+.skill[data-skill='Java'] {
+  background-color: #007396;
+}
+.skill[data-skill='JavaScript'] {
+  background-color: #f7df1e;
+  color: black;
+}
+.skill[data-skill='Laravel'] {
+  background-color: #ff2d20;
+}
+.skill[data-skill='MongoDB'] {
+  background-color: #47a248;
+}
+.skill[data-skill='SQL Server'] {
+  background-color: #cc2927;
+}
+.skill[data-skill='MySQL'] {
+  background-color: #4479a1;
+}
+.skill[data-skill='Node.js'] {
+  background-color: #339933;
+}
+.skill[data-skill='Photoshop'] {
+  background-color: #31a8ff;
+}
+.skill[data-skill='PHP'] {
+  background-color: #777bb4;
+}
+.skill[data-skill='Postman'] {
+  background-color: #ff6c37;
+}
+.skill[data-skill='Python'] {
+  background-color: #306998;
+}
+.skill[data-skill='React'] {
+  background-color: #61dafb;
+  color: black;
+}
+.skill[data-skill='React Native'] {
+  background-color: #61dafb;
+  color: black;
+}
+.skill[data-skill='Redis'] {
+  background-color: #dc382d;
+}
+.skill[data-skill='Selenium'] {
+  background-color: #43b02a;
 }
