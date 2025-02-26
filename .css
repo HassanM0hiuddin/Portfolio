@@ -17,7 +17,7 @@
   --second-color: #e4e4e4;
   --other-color: #c6c9d8bf;
   --hl-font: 7rem;
-  --h2-font: 3.5rem;
+  --h2-font: 3 5rem;
   --p-font: 1.1rem;
 }
 
@@ -44,7 +44,6 @@ header {
 .logo img {
   width: 100px;
   height: auto;
-  border-radius: 5px;
 }
 
 .navlist {
@@ -76,7 +75,7 @@ section {
   position: relative;
   min-height: 100vh;
   width: 100%;
-
+  background: url(../img/background.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -89,7 +88,6 @@ section {
   font-weight: 600;
   margin-bottom: 15px;
   word-spacing: 10px;
-  padding: 10px;
 }
 
 .hero-text h1 {
@@ -181,42 +179,7 @@ span {
   font-size: 22px;
   font-weight: 500;
 }
-.technologies-section {
-  padding: 50px 0;
-  text-align: center;
-  background-color: #f9f9f9; /* Example background color */
-}
 
-.technologies-section h2 {
-  margin-bottom: 20px;
-}
-
-.technologies-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.technologies-list li {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.technology-icon {
-  width: 50px; /* Adjust icon size */
-  height: 50px;
-  margin-bottom: 5px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 .service-item {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));

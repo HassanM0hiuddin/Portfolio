@@ -1,161 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Website</title>
-  <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-</head>
+  <body>
+    <header>
+      <a href="#" class="logo"><img src="img/logo.png" /></a>
+      <div class="bx" id="menu-icon">
+        <ul class="navlist">
+          <li><a href="#home"> Home</a></li>
+          <li><a href="#about"> About</a></li>
+          <li><a href="#service"> Service</a></li>
+          <li><a href="#portfolio"> Portfolio</a></li>
+          <li><a href="#blog"> Blog</a></li>
+          <li><a href="#contact"> Contact</a></li>
+        </ul>
+      </div>
+    </header>
 
-<body>
-  <header>
+    <section
+      class="home"
+      id="home"
+      style="background-image: url(img/background.jpg)"
+    >
+      <div class="hero-text">
+        <h3>Hello I'm</h3>
+        <h1>Hassan Mohiuddin</h1>
+        <h4>Full Stack Developer</h4>
+        <a href="#" class="btn">My Works</a>
+      </div>
+    </section>
 
-    <div class="bx bx-menu" id="menu-icon"></div>
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="img/about.jpg" />
+      </div>
 
-    <ul class="navlist">
-      <li><a href="#home"> Home</a></li>
-      <li><a href="#about"> About</a></li>
-      <li><a href="#service"> Service</a></li>
-      <li><a href="#portfolio"> Portfolio</a></li>
-      <li><a href="#blog"> Blog</a></li>
-      <li><a href="#contact"> Contact</a></li>
-    </ul>
-  </header>
-
-  <section class="home" id="home">
-    <div class="hero-text">
-      <h3>Hello I'm</h3>
-      <h1>Hassan Mohiuddin</h1>
-      <h4>Software Engineering Student</h4>
-      <a href="#" class="btn">My Works</a>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="img/about.jpg" />
-    </div>
-
-    <div class="about-text">
-      <h2>About me</h2>
-      <h5>
-        I am a Creative Designer <span>Photographer and Developer </span>
-      </h5>
-      <p>
-        As a creative designer, I delight in turning abstract ideas into visually striking creations. With a passion for
-        innovative design and a sharp eye for aesthetics, I enjoy pushing the boundaries of conventional design. Whether
-        it's
-        crafting brand identities, designing user interfaces, or bringing imaginative concepts to life through
-        illustrations, I
-        thrive on the challenge of transforming imagination into impactful visuals. My work is a careful balance between
-        inspiration and technique, aiming to exceed expectations and leave a lasting impression that speaks volumes
-        about the
-        power of creativity and design.
-
-      </p>
-      <a href="#" class="btn">Hire Me</a>
-    </div>
-  </section>
-
-  <section class="service" id="service">
-    <div class="text-center">
-      <h2>My Services</h2>
-      <h4>We Work With You, Not For You</h4>
-    </div>
-
-    <div class="service-item">
-      <div class="service-box">
-        <i class="bx bx-mobile-alt"></i>
-        <h3>Web Design</h3>
+      <div class="about-text">
+        <h2>About me</h2>
+        <h5>I am a Creative <span> Designer and Developer </span></h5>
         <p>
-          I specialize in crafting seamless and visually engaging digital experiences. My expertise lies in merging
-          aesthetic
-          appeal with intuitive functionality to create websites that captivate and resonate with users.
+          I am a creative web designer, and developer, seamlessly blending
+          artistic flair with technical expertise. I bring ideas to life,
+          crafting visually stunning websites and capturing fleeting moments
+          through my lens. My work transcends boundaries, leaving a lasting
+          impact on the digital landscape
         </p>
-        <a href="#" class="s-btnn">Read More</a>
+        <button class="btn" onclick="sendEmail()">Hire Me</button>
+      </div>
+    </section>
+
+    <section class="service" id="service">
+      <div class="text-center">
+        <h2>My Services</h2>
+        <h4>We Work With You, Not For You</h4>
       </div>
 
-      <div class="service-box">
-        <i class="bx bx-code-alt"></i>
-        <h3>Web Development</h3>
+      <div class="service-item">
+        <div class="service-box">
+          <i class="bx bx-mobile-alt"></i>
+          <h3>Web Design</h3>
+          <p>
+            bring a wealth of knowledge and creativity to every project. My
+            expertise lies in crafting intuitive user interfaces and visually
+            captivating designs, ensuring a seamless and engaging online
+            experience for users.
+          </p>
+        </div>
+
+        <div class="service-box">
+          <i class="bx bx-code-alt"></i>
+          <h3>Web Development</h3>
+          <p>
+            In web development, I excel as an expert, crafting robust and
+            innovative solutions. My proficiency in coding languages,
+            problem-solving skills, and attention to detail allow me to create
+            dynamic websites and applications that meet the highest standards of
+            functionality and user experience.
+          </p>
+        </div>
+
+        <div class="service-box">
+          <i class="bx bx-signal-5"></i>
+          <h3>SEO Marketing</h3>
+          <p>
+            In the realm of SEO marketing, I am sa seasoned expert, leveraging
+            my deep understanding of search algorithms and consumer behavior.
+            Through strategic keyword optimization, content marketing, and data
+            analysis.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="technologies" class="technologies-section">
+      <div class="container">
+        <h2>Coding Technologies</h2>
+        <p>Here are some of the technologies I'm proficient in:</p>
+        <ul class="technologies-list">
+          <li>
+            <i class="fab fa-html5 technology-icon"></i>
+            <span>HTML5</span>
+          </li>
+          <li>
+            <i class="fab fa-css3-alt technology-icon"></i>
+            <span>CSS3</span>
+          </li>
+          <li>
+            <i class="fab fa-js-square technology-icon"></i>
+            <span>JavaScript</span>
+          </li>
+          <li>
+            <i class="fab fa-react technology-icon"></i>
+            <span>React</span>
+          </li>
+          <li>
+            <i class="fab fa-node-js technology-icon"></i>
+            <span>Node.js</span>
+          </li>
+          <li>
+            <i class="fab fa-python technology-icon"></i>
+            <span>Python</span>
+          </li>
+          <li>
+            <i class="fas fa-database technology-icon"></i>
+            <span>SQL</span>
+          </li>
+          <li>
+            <i class="fab fa-git-alt technology-icon"></i>
+            <span>Git</span>
+          </li>
+        </ul>
+      </div>
+    </section> -->
+    <section class="contact" id="contact">
+      <div class="left-contact">
+        <div class="in">
+          <i class="bx bxl-behance"></i>
+          <h4>Behance</h4>
+        </div>
+
+        <div class="in">
+          <i class="bx bxl-dribbble"></i>
+          <h4>Dribble</h4>
+        </div>
+
+        <a
+          class="in"
+          href="https://www.upwork.com/freelancers/~011bd5b58a39e5bc9c"
+        >
+          <i class="bx bxl-upwork"> </i>
+          <h4 style="color: white">Upwork</h4>
+        </a>
+      </div>
+      <div class="right-contact">
+        <h2>Profiles</h2>
+        <button class="btn" onclick="sendEmail()">Hire Me</button>
         <p>
-          I excel in coding and creating robust, user-friendly websites. My skills encompass front-end and back-end
-          technologies,
-          ensuring the delivery of responsive and efficient digital solutions.
-
+          I am a skilled and dedicated professional eager to contribute my
+          expertise to your team. My background encompasses Full Stack Developer
+          . I am passionate about Building application and committed to
+          delivering high-quality results. I am confident that my abilities and
+          work ethic make me a valuable asset.
         </p>
-        <a href="#" class="s-btnn">Read More</a>
       </div>
+    </section>
 
-      <div class="service-box">
-        <i class="bx bx-signal-5"></i>
-        <h3>SEO Marketing</h3>
-        <p>
-          As an SEO marketer, I thrive in optimizing online visibility and driving organic traffic. My strategic
-          approach involves
-          leveraging keywords, content, and analytics to enhance website rankings, ultimately boosting brand visibility
-          and
-          engagement in the digital landscape.
-        </p>
-        <a href="#" class="s-btnn">Read More</a>
+    <section class="end-section">
+      <h3>Hassan Mohiuddin</h3>
+      <p>For more info click on the links below</p>
+      <button
+        style="
+          height: auto;
+          padding: 10px;
+          background-color: black;
+          color: white;
+          font-size: large;
+        "
+        onclick="sendEmail()"
+      >
+        Email at hassanmohiuddin73@gmail.com
+      </button>
+      <div class="end-icons">
+        <a href="https://web.facebook.com/hassan.mohiuddin.908/"
+          ><i class="bx bxl-facebook-circle"></i
+        ></a>
+        <a href="https://www.instagram.com/mohhassan232/"
+          ><i class="bx bxl-instagram"></i
+        ></a>
+        <a href="https://twitter.com/HasanMohiudin73"
+          ><i class="bx bxl-twitter"></i
+        ></a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="contact" id="contact">
-    <div class="left-contact">
-      <div class="in">
-        <i class="bx bxl-behance"></i>
-        <h4>Behance</h4>
-      </div>
+    <a href="https://www.facebook.com/hassan.mohiuddin.908" class="scroll-bttn"
+      ><i class="bx bx-chevron-up"></i
+    ></a>
 
-      <div class="in">
-        <i class="bx bxl-dribbble"></i>
-        <h4>Dribble</h4>
-      </div>
+    <script src="http://unpkg.com/scrollreveal"></script>
+    <script>
+      function sendEmail() {
+        const recipient = 'hassanmohiuddin73@gmail.com'
+        const subject = encodeURIComponent('Job Inquiry') // Optional: Add a subject
+        const body = encodeURIComponent(
+          'Dear Hassan,\n\nI am writing to express my interest in...'
+        ) // Optional: Add a body
 
-      <div class="in">
-        <i class="bx bxl-upwork"></i>
-        <h4>Upwork</h4>
-      </div>
-    </div>
-    <div class="right-contact">
-      <h2>Profiles</h2>
-      <a href="#">Hire Me</a>
-      <p>
-        With a strong background in web development, I bring proven skills and a passion for creating exceptional online
-        experiences. My expertise in front-end,and a fair bit in back-end development has been honed through . Eager to
-        contribute my skills to a dynamic team, I'm excited about the
-        opportunity to discuss how I can enhance your web development projects. Thank you for considering my
-        application.
-      </p>
-    </div>
-  </section>
-
-  <section class="end-section">
-    <h3>Hassan Mohiuddin</h3>
-    <p>For more info click on the links below</p>
-    <div class="end-icons">
-      <a href="#"><i class="bx bxl-facebook-circle"></i></a>
-      <a href="#"><i class="bx bxl-instagram"></i></a>
-      <a href="#"><i class="bx bxl-twitter"></i></a>
-    </div>
-  </section>
-
-  <a href="#" class="scroll-bttn"><i class="bx bx-chevron-up"></i></a>
-
-  <script src="http://unpkg.com/scrollreveal"></script>
-
-  <script src="index.js"></script>
-</body>
-
+        window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`
+      }
+    </script>
+    <script src="index.js"></script>
+  </body>
 </html>
