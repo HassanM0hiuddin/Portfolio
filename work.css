@@ -32,6 +32,7 @@ body {
 .project-card {
   background: var(--second-bg-color);
   border-radius: 10px;
+
   padding: 2rem;
   transition: all 0.3s ease;
   border: 1px solid transparent;
@@ -77,7 +78,7 @@ body {
 header {
   background: var(--second-bg-color);
   padding: 1rem 5%;
-  position: fixed;
+
   width: 100%;
   top: 0;
   z-index: 1000;
