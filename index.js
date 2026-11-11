@@ -83,3 +83,104 @@ function sendEmail() {
   )
   window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`
 }
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+// Scroll progress bar
+const progress = document.querySelector('.scroll-progress')
+function updateProgress() {
+  if (!progress) return
+  const max = document.documentElement.scrollHeight - window.innerHeight
+  progress.style.setProperty('--progress', max > 0 ? window.scrollY / max : 0)
+}
+window.addEventListener('scroll', updateProgress, { passive: true })
+updateProgress()
+
+// Cursor glow + card spotlight
+const glow = document.querySelector('.cursor-glow')
+window.addEventListener(
+  'pointermove',
+  (e) => {
+    if (!glow) return
+    glow.style.setProperty('--mx', e.clientX + 'px')
+    glow.style.setProperty('--my', e.clientY + 'px')
+  },
+  { passive: true }
+)
+
+document
+  .querySelectorAll('.service-box, .timeline-card, .skill-group, .contact-card, .skill, .stat')
+  .forEach((card) => {
+    card.addEventListener('pointermove', (e) => {
+      const r = card.getBoundingClientRect()
+      card.style.setProperty('--x', e.clientX - r.left + 'px')
+      card.style.setProperty('--y', e.clientY - r.top + 'px')
+    })
+  })
+
+// Stagger reveal animations inside grids
+document
+  .querySelectorAll('.service-item, .timeline, .skill-groups')
+  .forEach((group) => {
+    group.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = i * 0.1 + 's'
+    })
+  })
+
+// Typed role rotator
+const typed = document.querySelector('.typed')
+if (typed && !reduceMotion) {
+  let words = []
+  try {
+    words = JSON.parse(typed.dataset.words)
+  } catch (err) {
+    words = [typed.textContent]
+  }
+  let w = 0
+  let c = words[0].length
+  let deleting = true
+
+  const tick = () => {
+    const word = words[w]
+    c += deleting ? -1 : 1
+    typed.textContent = word.slice(0, c)
+
+    let delay = deleting ? 40 : 80
+    if (!deleting && c === word.length) {
+      deleting = true
+      delay = 2000
+    } else if (deleting && c === 0) {
+      deleting = false
+      w = (w + 1) % words.length
+      delay = 300
+    }
+    setTimeout(tick, delay)
+  }
+  setTimeout(tick, 2200)
+}
+
+// Animated stat counters
+const counters = document.querySelectorAll('[data-count]')
+if ('IntersectionObserver' in window && !reduceMotion) {
+  const countObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        const el = entry.target
+        const target = Number(el.dataset.count)
+        const suffix = el.dataset.suffix || ''
+        const start = performance.now()
+        const duration = 1200
+        const step = (now) => {
+          const p = Math.min((now - start) / duration, 1)
+          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix
+          if (p < 1) requestAnimationFrame(step)
+        }
+        requestAnimationFrame(step)
+        countObserver.unobserve(el)
+      })
+    },
+    { threshold: 0.6 }
+  )
+  counters.forEach((el) => countObserver.observe(el))
+}

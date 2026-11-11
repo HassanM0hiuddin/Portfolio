@@ -3,127 +3,156 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Software Project Portfolio</title>
-    <link rel="stylesheet" href="work.css" />
-    <style>
-      .github-logo {
-        width: 24px;
-        height: 24px;
-        margin-left: 8px;
-        vertical-align: middle;
-      }
-    </style>
+    <title>Projects | Hassan Mohiuddin</title>
+    <meta
+      name="description"
+      content="Live projects by Hassan Mohiuddin, including PAIEX, an AI-powered Google review insights platform, and the Resilient Technologies website."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23e9204f'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='white'%3EHM%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
     <header>
-      <h1>Projects</h1>
+      <a href="index.html#home" class="logo">Hassan<span>.</span></a>
+      <nav>
+        <ul class="navlist">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="Work.html" class="active">Projects</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <i class="bx bx-menu" id="menu-icon" aria-label="Open menu"></i>
     </header>
-    <main>
-      <section id="projects" class="projects-container">
-        <!-- Existing project cards -->
-        <div class="project-card">
-          <h2>MedTalk React App</h2>
+
+    <section class="projects-hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="grid-overlay"></span>
+      </div>
+      <div class="projects-hero-text">
+        <p class="eyebrow">Selected work</p>
+        <h1>Live <span>Projects</span></h1>
+        <p>
+          Production products I've helped build and ship, live and used by
+          real customers today.
+        </p>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <article class="project reveal">
+        <a
+          class="project-shot"
+          href="https://www.perceptionie.co.uk"
+          target="_blank"
+          rel="noopener"
+          aria-label="Open PAIEX live site"
+        >
+          <div class="browser-bar"><i></i><i></i><i></i><small>perceptionie.co.uk</small></div>
+          <img src="img/projects/paiex.jpg" alt="PAIEX product page showing the review insights dashboard" loading="lazy" />
+        </a>
+        <div class="project-info">
+          <span class="project-tag"><i class="bx bxs-circle"></i> Live · SaaS</span>
+          <h2>PAIEX <small>Perception and Insights Explorer</small></h2>
           <p>
-            A React application designed for medical consultations, facilitating
-            seamless communication between patients and healthcare providers.
+            An AI-powered platform that turns Google Business reviews into
+            clear, actionable insights. It connects to a business's Google
+            profile, scores customer sentiment, surfaces key opinion topics,
+            and drafts polished replies to negative reviews within minutes.
           </p>
-          <a
-            href="https://github.com/HassanM0hiuddin/MedTalk-React-app"
-            target="_blank"
-            >View on GitHub
-            <img
-              src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-              alt="GitHub Logo"
-              class="github-logo"
-          /></a>
+          <ul class="project-points">
+            <li>Natural-language search over reviews (“What were my most common complaints last month?”)</li>
+            <li>Sentiment scores, trend curves, heatmaps and key topic extraction</li>
+            <li>AI-drafted replies and instant alerts for negative reviews</li>
+            <li>Automated weekly and monthly reports, plus CSV import from other platforms</li>
+            <li>Subscription billing and Google Business Profile integration</li>
+          </ul>
+          <div class="chips">
+            <span>React</span><span>FastAPI</span><span>LLMs</span><span>RAG</span><span>LangChain</span><span>Azure</span><span>Stripe</span><span>Google APIs</span>
+          </div>
+          <div class="hero-btns">
+            <a href="https://www.perceptionie.co.uk" class="btn" target="_blank" rel="noopener"><i class="bx bx-link-external"></i> Visit Live App</a>
+            <a href="https://www.resilienttech.co.uk/paiex/" class="btn btn-outline" target="_blank" rel="noopener"><i class="bx bx-info-circle"></i> Product Page</a>
+          </div>
         </div>
-        <div class="project-card">
-          <h2>Next.js Chat Application</h2>
+      </article>
+
+      <article class="project project-reverse reveal">
+        <a
+          class="project-shot"
+          href="https://www.resilienttech.co.uk/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Open Resilient Technologies website"
+        >
+          <div class="browser-bar"><i></i><i></i><i></i><small>resilienttech.co.uk</small></div>
+          <img src="img/projects/resilienttech.jpg" alt="Resilient Technologies homepage: Customer Centric AI Solutions" loading="lazy" />
+        </a>
+        <div class="project-info">
+          <span class="project-tag"><i class="bx bxs-circle"></i> Live · Website</span>
+          <h2>Resilient Technologies <small>Company website</small></h2>
           <p>
-            A real-time chat application built with Next.js, offering seamless
-            communication with modern web technologies.
+            The website of Resilient Technologies Ltd, a UK AI start-up in
+            the Microsoft for Startups Founders Hub that builds responsible,
+            customer-centric AI solutions. It showcases the company's
+            products, Legal Tech and PAIEX, alongside its blog and services.
           </p>
-          <a
-            href="https://github.com/HassanM0hiuddin/Next-Js-/tree/main/next-chat"
-            target="_blank"
-            >View on GitHub
-            <img
-              src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-              alt="GitHub Logo"
-              class="github-logo"
-          /></a>
+          <ul class="project-points">
+            <li>Product landing pages with pricing, FAQs and newsletter sign-up</li>
+            <li>Responsive layouts and SEO-friendly content structure</li>
+            <li>Blog and content management for the marketing team</li>
+          </ul>
+          <div class="chips">
+            <span>WordPress</span><span>Divi</span><span>SEO</span><span>Responsive Design</span>
+          </div>
+          <div class="hero-btns">
+            <a href="https://www.resilienttech.co.uk/" class="btn" target="_blank" rel="noopener"><i class="bx bx-link-external"></i> Visit Website</a>
+          </div>
         </div>
-        <div class="project-card">
-          <h2>SkillSyncPro</h2>
-          <p>
-            A platform connecting professionals to share and sync their skills,
-            fostering collaborative growth and learning.
-          </p>
-          <a
-            href="https://github.com/HassanM0hiuddin/SkillSyncPro"
-            target="_blank"
-            >View on GitHub
-            <img
-              src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-              alt="GitHub Logo"
-              class="github-logo"
-          /></a>
-        </div>
-        <div class="project-card">
-          <h2>Keeper App</h2>
-          <p>
-            A note-taking application developed using React hooks, enabling
-            users to keep track of their tasks and ideas efficiently.
-          </p>
-          <a
-            href="https://github.com/HassanM0hiuddin/Keeper-App"
-            target="_blank"
-            >View on GitHub
-            <img
-              src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-              alt="GitHub Logo"
-              class="github-logo"
-          /></a>
-        </div>
-        <div class="project-card">
-          <h2>FoodApp - React Native</h2>
-          <p>
-            A React Native application for food enthusiasts, integrating
-            Firebase for backend services and utilizing async storage for
-            persistent data management.
-          </p>
-          <a
-            href="https://github.com/HassanM0hiuddin/FoodApp----react-naitve-"
-            target="_blank"
-            >View on GitHub
-            <img
-              src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-              alt="GitHub Logo"
-              class="github-logo"
-          /></a>
-        </div>
-        <!-- New project card -->
-        <div class="project-card">
-          <h2>Mapsimum Mobile</h2>
-          <p>
-            A driver application that enables users to select riders and scan QR
-            codes, enhancing the ride-sharing experience with efficient matching
-            and verification features.
-          </p>
-          <a
-            href="https://github.com/furqanistic/mapsimum-mobile"
-            target="_blank"
-            >View on GitHub
-            <img
-              src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-              alt="GitHub Logo"
-              class="github-logo"
-          /></a>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 Hassan Mohiuddin</p>
+      </article>
+
+      <div class="more-work reveal">
+        <h3>Want to see more?</h3>
+        <p>More of my code and side projects live on GitHub.</p>
+        <a href="https://github.com/HassanM0hiuddin" class="btn btn-outline" target="_blank" rel="noopener"><i class="bx bxl-github"></i> View GitHub</a>
+      </div>
+    </section>
+
+    <footer class="end-section">
+      <h3>Hassan Mohiuddin</h3>
+      <p>Full Stack Software Engineer · Islamabad, Pakistan</p>
+      <div class="end-icons">
+        <a href="https://github.com/HassanM0hiuddin" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/hassan-mohiuddin-a218a9272/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.upwork.com/freelancers/~011bd5b58a39e5bc9c" target="_blank" rel="noopener" aria-label="Upwork"><i class="bx bxl-upwork"></i></a>
+        <a href="mailto:hassanmohiuddin73@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
+      </div>
+      <small class="copyright">&copy; <span class="year"></span> Hassan Mohiuddin. All rights reserved.</small>
     </footer>
+
+    <a href="#" class="scroll-bttn" aria-label="Back to top"><i class="bx bx-chevron-up"></i></a>
+
+    <script src="index.js"></script>
   </body>
 </html>

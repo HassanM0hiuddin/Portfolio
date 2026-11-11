@@ -13,8 +13,11 @@
       property="og:description"
       content="Scalable web and AI-powered applications: React, Next.js, Node.js, FastAPI, LLMs, RAG, Azure."
     />
-    <meta property="og:image" content="img/about.jpg" />
-    <link rel="icon" href="img/logo.png" />
+    <meta property="og:image" content="img/Hassan.png" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23e9204f'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='white'%3EHM%3C/text%3E%3C/svg%3E"
+    />
     <link rel="stylesheet" href="styles.css" />
 
     <link
@@ -34,8 +37,11 @@
   </head>
 
   <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
     <header>
-      <a href="#home" class="logo"><img src="img/logo.png" alt="Hassan Mohiuddin logo" /></a>
+      <a href="#home" class="logo">Hassan<span>.</span></a>
       <nav>
         <ul class="navlist">
           <li><a href="#home">Home</a></li>
@@ -50,11 +56,23 @@
     </header>
 
     <section class="home" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+        <span class="grid-overlay"></span>
+      </div>
       <div class="hero-text">
         <span class="badge"><i class="bx bxs-circle"></i> Open to new opportunities</span>
         <h3>Hello, I'm</h3>
         <h1>Hassan Mohiuddin</h1>
-        <h4>Full Stack Software Engineer <span>·</span> AI &amp; Cloud</h4>
+        <h4>
+          <span
+            class="typed"
+            data-words='["Full Stack Software Engineer","AI &amp; LLM Engineer","Cloud &amp; DevOps Builder","Web3 Developer"]'
+            >Full Stack Software Engineer</span
+          ><span class="caret" aria-hidden="true"></span>
+        </h4>
         <p class="hero-sub">
           I build scalable web and AI-powered applications with React,
           Next.js, Node.js, FastAPI and Azure.
@@ -75,12 +93,48 @@
       <a href="#about" class="scroll-down" aria-label="Scroll down"><i class="bx bx-chevron-down"></i></a>
     </section>
 
+    <div class="marquee" aria-label="Technologies">
+      <div class="marquee-track">
+        <span>React</span><i class="bx bxs-star"></i>
+        <span>Next.js</span><i class="bx bxs-star"></i>
+        <span>Node.js</span><i class="bx bxs-star"></i>
+        <span>FastAPI</span><i class="bx bxs-star"></i>
+        <span>LLMs &amp; RAG</span><i class="bx bxs-star"></i>
+        <span>LangChain</span><i class="bx bxs-star"></i>
+        <span>Azure</span><i class="bx bxs-star"></i>
+        <span>AWS</span><i class="bx bxs-star"></i>
+        <span>Docker</span><i class="bx bxs-star"></i>
+        <span>Solidity</span><i class="bx bxs-star"></i>
+        <span aria-hidden="true">React</span><i class="bx bxs-star"></i>
+        <span aria-hidden="true">Next.js</span><i class="bx bxs-star"></i>
+        <span aria-hidden="true">Node.js</span><i class="bx bxs-star"></i>
+        <span aria-hidden="true">FastAPI</span><i class="bx bxs-star"></i>
+        <span aria-hidden="true">LLMs &amp; RAG</span><i class="bx bxs-star"></i>
+        <span aria-hidden="true">LangChain</span><i class="bx bxs-star"></i>
+        <span aria-hidden="true">Azure</span><i class="bx bxs-star"></i>
+        <span aria-hidden="true">AWS</span><i class="bx bxs-star"></i>
+        <span aria-hidden="true">Docker</span><i class="bx bxs-star"></i>
+        <span aria-hidden="true">Solidity</span><i class="bx bxs-star"></i>
+      </div>
+    </div>
+
     <section class="about" id="about">
       <div class="about-img reveal">
-        <img src="img/about.jpg" alt="Hassan Mohiuddin" />
+        <div class="photo-frame">
+          <img src="img/Hassan.png" alt="Portrait of Hassan Mohiuddin" />
+        </div>
+        <div class="float-chip chip-top">
+          <i class="bx bx-brain"></i>
+          <div><strong>AI &amp; LLMs</strong><small>RAG · LangChain</small></div>
+        </div>
+        <div class="float-chip chip-bottom">
+          <i class="bx bx-trophy"></i>
+          <div><strong>4+ Years</strong><small>Shipping production</small></div>
+        </div>
       </div>
 
       <div class="about-text reveal">
+        <p class="eyebrow">01 · About</p>
         <h2>About <span>me</span></h2>
         <h5>Full Stack Engineer building <span>AI-powered products</span></h5>
         <p>
@@ -98,8 +152,8 @@
           business value.
         </p>
         <div class="stats">
-          <div class="stat"><strong>4+</strong><small>Years experience</small></div>
-          <div class="stat"><strong>4</strong><small>Companies</small></div>
+          <div class="stat"><strong data-count="4" data-suffix="+">4+</strong><small>Years experience</small></div>
+          <div class="stat"><strong data-count="4">4</strong><small>Companies</small></div>
           <div class="stat"><strong>BS</strong><small>Software Eng., COMSATS</small></div>
         </div>
         <button class="btn" onclick="sendEmail()">Hire Me</button>
@@ -108,6 +162,7 @@
 
     <section class="service" id="service">
       <div class="text-center reveal">
+        <p class="eyebrow">02 · Services</p>
         <h2>What I <span>Do</span></h2>
         <h4>I work with you, not just for you</h4>
       </div>
@@ -153,6 +208,7 @@
 
     <section class="experience" id="experience">
       <div class="text-center reveal">
+        <p class="eyebrow">03 · Experience</p>
         <h2>Work <span>Experience</span></h2>
         <h4>Where I've been building</h4>
       </div>
@@ -235,6 +291,7 @@
 
     <section id="skills" class="skills">
       <div class="text-center reveal">
+        <p class="eyebrow">04 · Skills</p>
         <h2>My <span>Skills</span></h2>
         <h4>Tools I use to ship</h4>
       </div>
@@ -292,6 +349,7 @@
 
     <section class="contact" id="contact">
       <div class="contact-text reveal">
+        <p class="eyebrow">05 · Contact</p>
         <h2>Let's build something <span>together</span></h2>
         <p>
           I'm open to full-time roles, contracts and freelance projects,
@@ -332,9 +390,8 @@
       <div class="end-icons">
         <a href="https://github.com/HassanM0hiuddin" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
         <a href="https://www.linkedin.com/in/hassan-mohiuddin-a218a9272/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://twitter.com/HasanMohiudin73" target="_blank" rel="noopener" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.instagram.com/mohhassan232/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://web.facebook.com/hassan.mohiuddin.908/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bx bxl-facebook-circle"></i></a>
+        <a href="https://www.upwork.com/freelancers/~011bd5b58a39e5bc9c" target="_blank" rel="noopener" aria-label="Upwork"><i class="bx bxl-upwork"></i></a>
+        <a href="mailto:hassanmohiuddin73@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
       </div>
       <small class="copyright">&copy; <span class="year"></span> Hassan Mohiuddin. All rights reserved.</small>
     </footer>
