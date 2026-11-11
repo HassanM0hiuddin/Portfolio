@@ -17,6 +17,10 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -49,28 +53,59 @@
         <span class="blob blob-2"></span>
         <span class="grid-overlay"></span>
       </div>
+
       <div class="projects-hero-text">
         <p class="eyebrow">Selected work</p>
         <h1>Live <span>Projects</span></h1>
         <p>
-          Production products I've helped build and ship, live and used by
-          real customers today.
+          Production products and websites I've helped build and ship, live
+          and used by real customers today.
         </p>
+        <div class="hero-stats">
+          <div><strong>03</strong><span>Live projects</span></div>
+          <div><strong>AI</strong><span>SaaS &amp; web</span></div>
+          <div><strong>UK</strong><span>Based clients</span></div>
+        </div>
+      </div>
+
+      <div class="hero-stack" aria-label="Jump to a project">
+        <a href="#paiex" class="stack-card" style="--accent: #1fa9b0">
+          <img src="img/projects/paiex.jpg" alt="" />
+          <span>01 · PAIEX</span>
+        </a>
+        <a href="#ienvisage" class="stack-card" style="--accent: #2f7fe0">
+          <img src="img/projects/ienvisage.jpg" alt="" />
+          <span>02 · iEnvisage AI</span>
+        </a>
+        <a href="#resilienttech" class="stack-card" style="--accent: #6b7bff">
+          <img src="img/projects/resilienttech.jpg" alt="" />
+          <span>03 · Resilient Tech</span>
+        </a>
       </div>
     </section>
 
     <section class="projects" id="projects">
-      <article class="project reveal">
-        <a
-          class="project-shot"
-          href="https://www.perceptionie.co.uk"
-          target="_blank"
-          rel="noopener"
-          aria-label="Open PAIEX live site"
-        >
-          <div class="browser-bar"><i></i><i></i><i></i><small>perceptionie.co.uk</small></div>
-          <video src="videos/paiex.mp4" poster="img/projects/paiex.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Scrolling preview of the PAIEX product page"></video>
-        </a>
+      <article class="project reveal" id="paiex" style="--accent: #1fa9b0; --accent-glow: rgba(31, 169, 176, 0.35)">
+        <span class="project-num" aria-hidden="true">01</span>
+        <div class="project-media">
+          <a
+            class="device-laptop"
+            href="https://www.perceptionie.co.uk"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open PAIEX live site"
+          >
+            <div class="screen">
+              <div class="browser-bar"><i></i><i></i><i></i><small>perceptionie.co.uk</small></div>
+              <video src="videos/paiex.mp4" poster="img/projects/paiex.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Scrolling preview of the PAIEX product page"></video>
+              <span class="visit-overlay">Visit site <i class="bx bx-right-top-arrow-circle"></i></span>
+            </div>
+            <div class="base" aria-hidden="true"></div>
+          </a>
+          <div class="device-phone" aria-hidden="true">
+            <img src="img/projects/paiex-mobile.jpg" alt="" loading="lazy" />
+          </div>
+        </div>
         <div class="project-info">
           <span class="project-tag"><i class="bx bxs-circle"></i> Live · SaaS</span>
           <h2>PAIEX <small>Perception and Insights Explorer</small></h2>
@@ -88,7 +123,14 @@
             <li>Subscription billing and Google Business Profile integration</li>
           </ul>
           <div class="chips">
-            <span>React</span><span>FastAPI</span><span>LLMs</span><span>RAG</span><span>LangChain</span><span>Azure</span><span>Stripe</span><span>Google APIs</span>
+            <span><i class="devicon-react-original colored"></i>React</span>
+            <span><i class="devicon-fastapi-plain colored"></i>FastAPI</span>
+            <span><i class="bx bx-brain"></i>LLMs</span>
+            <span><i class="bx bx-data"></i>RAG</span>
+            <span><i class="bx bx-link"></i>LangChain</span>
+            <span><i class="devicon-azure-plain colored"></i>Azure</span>
+            <span><i class="bx bxl-stripe"></i>Stripe</span>
+            <span><i class="bx bxl-google"></i>Google APIs</span>
           </div>
           <div class="hero-btns">
             <a href="https://www.perceptionie.co.uk" class="btn" target="_blank" rel="noopener"><i class="bx bx-link-external"></i> Visit Live App</a>
@@ -97,17 +139,27 @@
         </div>
       </article>
 
-      <article class="project project-reverse reveal">
-        <a
-          class="project-shot"
-          href="https://ienvisageai.co.uk/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Open iEnvisage AI website"
-        >
-          <div class="browser-bar"><i></i><i></i><i></i><small>ienvisageai.co.uk</small></div>
-          <video src="videos/ienvisage.mp4" poster="img/projects/ienvisage.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Scrolling preview of the iEnvisage AI website"></video>
-        </a>
+      <article class="project project-reverse reveal" id="ienvisage" style="--accent: #2f7fe0; --accent-glow: rgba(47, 127, 224, 0.35)">
+        <span class="project-num" aria-hidden="true">02</span>
+        <div class="project-media">
+          <a
+            class="device-laptop"
+            href="https://ienvisageai.co.uk/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open iEnvisage AI website"
+          >
+            <div class="screen">
+              <div class="browser-bar"><i></i><i></i><i></i><small>ienvisageai.co.uk</small></div>
+              <video src="videos/ienvisage.mp4" poster="img/projects/ienvisage.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Scrolling preview of the iEnvisage AI website"></video>
+              <span class="visit-overlay">Visit site <i class="bx bx-right-top-arrow-circle"></i></span>
+            </div>
+            <div class="base" aria-hidden="true"></div>
+          </a>
+          <div class="device-phone" aria-hidden="true">
+            <img src="img/projects/ienvisage-mobile.jpg" alt="" loading="lazy" />
+          </div>
+        </div>
         <div class="project-info">
           <span class="project-tag"><i class="bx bxs-circle"></i> Live · Website</span>
           <h2>iEnvisage AI <small>Healthcare AI company website</small></h2>
@@ -125,7 +177,11 @@
             <li>Fully responsive across desktop, tablet and mobile</li>
           </ul>
           <div class="chips">
-            <span>WordPress</span><span>Divi</span><span>Custom CSS</span><span>SEO</span><span>Responsive Design</span>
+            <span><i class="devicon-wordpress-plain"></i>WordPress</span>
+            <span><i class="bx bx-layout"></i>Divi</span>
+            <span><i class="devicon-css3-plain colored"></i>Custom CSS</span>
+            <span><i class="bx bx-search-alt"></i>SEO</span>
+            <span><i class="bx bx-devices"></i>Responsive Design</span>
           </div>
           <div class="hero-btns">
             <a href="https://ienvisageai.co.uk/" class="btn" target="_blank" rel="noopener"><i class="bx bx-link-external"></i> Visit Website</a>
@@ -133,17 +189,27 @@
         </div>
       </article>
 
-      <article class="project reveal">
-        <a
-          class="project-shot"
-          href="https://www.resilienttech.co.uk/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Open Resilient Technologies website"
-        >
-          <div class="browser-bar"><i></i><i></i><i></i><small>resilienttech.co.uk</small></div>
-          <video src="videos/resilienttech.mp4" poster="img/projects/resilienttech.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Scrolling preview of the Resilient Technologies website"></video>
-        </a>
+      <article class="project reveal" id="resilienttech" style="--accent: #6b7bff; --accent-glow: rgba(107, 123, 255, 0.35)">
+        <span class="project-num" aria-hidden="true">03</span>
+        <div class="project-media">
+          <a
+            class="device-laptop"
+            href="https://www.resilienttech.co.uk/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open Resilient Technologies website"
+          >
+            <div class="screen">
+              <div class="browser-bar"><i></i><i></i><i></i><small>resilienttech.co.uk</small></div>
+              <video src="videos/resilienttech.mp4" poster="img/projects/resilienttech.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Scrolling preview of the Resilient Technologies website"></video>
+              <span class="visit-overlay">Visit site <i class="bx bx-right-top-arrow-circle"></i></span>
+            </div>
+            <div class="base" aria-hidden="true"></div>
+          </a>
+          <div class="device-phone" aria-hidden="true">
+            <img src="img/projects/resilienttech-mobile.jpg" alt="" loading="lazy" />
+          </div>
+        </div>
         <div class="project-info">
           <span class="project-tag"><i class="bx bxs-circle"></i> Live · Website</span>
           <h2>Resilient Technologies <small>Company website</small></h2>
@@ -159,7 +225,10 @@
             <li>Blog and content management for the marketing team</li>
           </ul>
           <div class="chips">
-            <span>WordPress</span><span>Divi</span><span>SEO</span><span>Responsive Design</span>
+            <span><i class="devicon-wordpress-plain"></i>WordPress</span>
+            <span><i class="bx bx-layout"></i>Divi</span>
+            <span><i class="bx bx-search-alt"></i>SEO</span>
+            <span><i class="bx bx-devices"></i>Responsive Design</span>
           </div>
           <div class="hero-btns">
             <a href="https://www.resilienttech.co.uk/" class="btn" target="_blank" rel="noopener"><i class="bx bx-link-external"></i> Visit Website</a>
@@ -167,10 +236,21 @@
         </div>
       </article>
 
-      <div class="more-work reveal">
-        <h3>Want to see more?</h3>
-        <p>More of my code and side projects live on GitHub.</p>
-        <a href="https://github.com/HassanM0hiuddin" class="btn btn-outline" target="_blank" rel="noopener"><i class="bx bxl-github"></i> View GitHub</a>
+      <div class="cta-banner reveal">
+        <span class="cta-ring cta-ring-1" aria-hidden="true"></span>
+        <span class="cta-ring cta-ring-2" aria-hidden="true"></span>
+        <div class="cta-text">
+          <p class="cta-kicker">Available for new work</p>
+          <h3>Have a project in mind? <span>Let's talk.</span></h3>
+          <p>
+            From AI-powered products to fast, polished websites, I can take
+            it from idea to launch. More of my code lives on GitHub.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a href="mailto:hassanmohiuddin73@gmail.com" class="btn btn-light"><i class="bx bx-envelope"></i> Email Me</a>
+          <a href="https://github.com/HassanM0hiuddin" class="btn btn-ghost" target="_blank" rel="noopener"><i class="bx bxl-github"></i> View GitHub</a>
+        </div>
       </div>
     </section>
 

@@ -184,3 +184,55 @@ if ('IntersectionObserver' in window && !reduceMotion) {
   )
   counters.forEach((el) => countObserver.observe(el))
 }
+
+// Project videos: only play while on screen, and never autoplay for reduced motion
+const videos = document.querySelectorAll('.project-media video')
+if (reduceMotion) {
+  videos.forEach((v) => {
+    v.removeAttribute('autoplay')
+    v.pause()
+  })
+} else if ('IntersectionObserver' in window) {
+  const videoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const v = entry.target
+        if (entry.isIntersecting) {
+          const p = v.play()
+          if (p && p.catch) p.catch(() => {})
+        } else {
+          v.pause()
+        }
+      })
+    },
+    { threshold: 0.15 }
+  )
+  videos.forEach((v) => videoObserver.observe(v))
+}
+
+// Phone mockups drift slightly against the scroll for a sense of depth
+const phones = document.querySelectorAll('.device-phone')
+if (phones.length && !reduceMotion) {
+  let ticking = false
+  const updatePhones = () => {
+    const mid = window.innerHeight / 2
+    phones.forEach((phone) => {
+      const r = phone.parentElement.getBoundingClientRect()
+      const offset = r.top + r.height / 2 - mid
+      const py = Math.max(-40, Math.min(40, offset * -0.08))
+      phone.style.setProperty('--py', py.toFixed(1) + 'px')
+    })
+    ticking = false
+  }
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        ticking = true
+        requestAnimationFrame(updatePhones)
+      }
+    },
+    { passive: true }
+  )
+  updatePhones()
+}
